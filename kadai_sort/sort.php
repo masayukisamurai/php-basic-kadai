@@ -25,8 +25,8 @@
     }
   } 
   $nums = [15, 4, 18, 23, 10];
-  sort_2way($nums, true);
-  sort_2way($nums, false);
+  $sort_2way($nums, true);
+  $sort_2way($nums, false);
   ?>
 </p>
 </body>
