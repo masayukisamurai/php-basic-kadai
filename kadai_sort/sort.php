@@ -9,21 +9,22 @@
 <body>
 <p> 
   <?php
-
-     $sort_2way = function ($nums, $order) {
+    $sort_2way = function ($nums, $order) {
         if ($order) {
           echo "昇順にソートします。<br>";
           sort($nums);
           foreach ($nums as $array) {
-          echo $array . "<br>";
+            echo $array . "<br>";
+          }
+        } else {
+          echo "降順にソートします。<br>";
+          rsort($nums);
+          foreach ($nums as $array) {
+            echo $array . "<br>";
+          }
         }
-      } else {
-        echo "降順にソートします。<br>";
-        rsort($nums); foreach ($nums as $array) {
-        echo $array . "<br>";
-      } 
-    }
-  } 
+      };
+
   $nums = [15, 4, 18, 23, 10];
   $sort_2way($nums, true);
   $sort_2way($nums, false);
