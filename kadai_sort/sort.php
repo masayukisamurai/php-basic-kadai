@@ -9,32 +9,27 @@
 <body>
 <p>
 <?php
-    $sort_2way = function ($nums, $order) {
+    $sort_2way = function ($array, $order) {
         if ($order) {
             echo "昇順にソートします。<br>";
-            sort($nums);
+            sort($array);
         } else {
             echo "降順にソートします。<br>";
-            rsort($nums);
+            rsort($array);
         }
-
-        foreach ($nums as $num) {
+        foreach ($array as $num) {
             echo $num . "<br>";
         }
     };
 
-    function process_sort_function($sortFunction, $nums, $order) {
-        echo "関数を引数として受け取りました:<br>";
-        $sortFunction($nums, $order);
-        echo "処理が完了しました。<br><br>";
+    function process_sort_function($sortFunction, $array, $order) {
+        $sortFunction($array, $order);
     }
 
-
-    $nums = [15, 4, 18, 23, 10];
-    process_sort_function($sort_2way, $nums, true);  // 昇順ソート
-    process_sort_function($sort_2way, $nums, false); // 降順ソート
+    $array = [15, 4, 18, 23, 10];
+    process_sort_function($sort_2way, $array, true);  // 昇順ソート
+    process_sort_function($sort_2way, $array, false); // 降順ソート
 ?>
 </p>
 </body>
-
 </html>
