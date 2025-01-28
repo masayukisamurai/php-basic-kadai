@@ -26,9 +26,9 @@
         $sortFunction($array, $order);
     }
 
-    $array = [15, 4, 18, 23, 10];
-    process_sort_function($sort_2way, $array, true);  // 昇順ソート
-    process_sort_function($sort_2way, $array, false); // 降順ソート
+    $nums= [15, 4, 18, 23, 10];
+    process_sort_function($sort_2way, $nums, true);
+    process_sort_function($sort_2way, $nums, false);
 ?>
 </p>
 </body>
